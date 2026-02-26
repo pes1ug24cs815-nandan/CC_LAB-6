@@ -1,7 +1,10 @@
 #include <iostream>
-using namespace std;
+#include <unistd.h>
 
 int main() {
-    cout << "Hello from Backend Application!" << endl;
+    while(true) {
+        std::cout << "Served by backend container!" << std::endl;
+        sleep(5);
+    }
     return 0;
 }
