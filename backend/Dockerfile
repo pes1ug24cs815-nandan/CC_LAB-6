@@ -1,10 +1,7 @@
-FROM gcc:latest
+FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY app.cpp .
+COPY app.py .
 
-RUN g++ app.cpp -o app
-
-CMD ["./app"]
-
+CMD ["python", "app.py"]
