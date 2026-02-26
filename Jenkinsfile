@@ -31,7 +31,7 @@ pipeline {
                 docker run -d -p 9090:80 \
                 --name nginx-container \
                 --network lab6-network \
-                -v $WORKSPACE/nginx/default.conf:/etc/nginx/conf.d/default.conf \
+                -v $WORKSPACE/nginx:/etc/nginx/conf.d \
                 nginx
                 '''
             }
